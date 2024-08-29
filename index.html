@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Hours Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 8px;
+            margin: 5px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Work Hours Tracker</h1>
+    <form id="hoursForm">
+        <label for="hours">Hours Worked:</label>
+        <input type="number" id="hours" name="hours" min="0.1" step="0.1" required>
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required>
+        <button type="submit">Add Hours</button>
+    </form>
+
+    <h2>Logged Hours</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Hours</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody id="hoursTableBody">
+            <!-- Logged hours will appear here -->
+        </tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
